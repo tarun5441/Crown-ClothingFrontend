@@ -1,0 +1,55 @@
+.menu-item {
+  min-width: calc((100% / 3) - 15px); /* Adjusted for three cards */
+  height: 310px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 0 7.5px 15px; /* Adjusted for three cards */
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.large {
+    height: 380px;
+  }
+
+  &:nth-child(3n + 3) {
+    margin-right: 0; /* Removes right margin for every third card */
+  }
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .content {
+    height: 90px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: white;
+    opacity: 0.7;
+    position: absolute;
+
+    .title {
+      font-weight: bold;
+      margin: 0 6px 0;
+      font-size: 22px;
+      color: #4a4a4a;
+    }
+
+    .subtitle {
+      font-weight: lighter;
+      font-size: 16px;
+    }
+  }
+}
